@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  brat:
+    image: cassj/brat:latest
+    container_name: brat
+    ports:
+    - "8089:80"
+    volumes:
+    - "./brat-data:/var/www/brat/brat-v1.3_Crunchy_Frog/data"
+    - "./users-config:/var/www/brat/brat-v1.3_Crunchy_Frog/cfg"
+    environment:
+    - BRAT_USERNAME=fernando
+    - BRAT_PASSWORD=venezuela
+    - BRAT_EMAIL=fernando.cremagarcia@kuleuven.be
